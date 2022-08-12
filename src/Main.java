@@ -11,56 +11,77 @@ public class Main {
 
         double [] doubleArr= {1.57, 7.654, 9.986};
 
-        char [] charsArr= {'1', '7', '9'};
+        int [] intsArr= {1, 7, 9};
 
         //Задание 2
         System.out.println("\nЗадание 2");
+
         int oneInteger;
-        for (oneInteger = 0; oneInteger < 2; oneInteger++) {
-            System.out.print(integersArr[oneInteger]+  ", ");
+        for (oneInteger = 0; oneInteger < 3; oneInteger++) {
+            if (oneInteger<2){
+                System.out.print(integersArr[oneInteger]+  ", ");
+            }else{
+                System.out.println(integersArr[oneInteger]);
+            }
         }
-        System.out.println(integersArr[2]);
 
         double oneDouble;
-        for (oneDouble = 0; oneDouble < 2; oneDouble++) {
+        for (oneDouble = 0; oneDouble < 3; oneDouble++) {
+            if (oneDouble<2){
             System.out.print(doubleArr[(int) oneDouble]+  ", ");
+            }else {
+                System.out.println(doubleArr[(int) oneDouble]);
+            }
         }
-        System.out.println( doubleArr[2]);
 
-        char oneChar;
-        for (oneChar = 0; oneChar < 2; oneChar++) {
-            System.out.print(charsArr[oneChar]+  ", ");
+        int oneInts;
+        for (oneInts = 0; oneInts < 3; oneInts++) {
+            if (oneInts<2){
+                System.out.print(intsArr[oneInts]+  ", ");
+            }else {
+                System.out.println(intsArr[oneInts]);
+            }
         }
-        System.out.println(charsArr[2]);
+
 
         //Задание 3
         System.out.println("\nЗадание 3");
-        for (oneInteger = 2; oneInteger > 0; oneInteger--) {
-            System.out.print(integersArr[oneInteger]+  ", ");
-        }
-        System.out.println(integersArr[0]);
 
-        for (oneDouble = 2; oneDouble > 0; oneDouble--) {
-            System.out.print(doubleArr[(int) oneDouble]+  ", ");
+        for (oneInteger=2; oneInteger >= 0; oneInteger--) {
+            if (oneInteger>0){
+                System.out.print(integersArr[oneInteger]+  ", ");
+            }else{
+                System.out.println(integersArr[oneInteger]);
+            }
         }
-        System.out.println( doubleArr[0]);
 
-        for (oneChar = 2; oneChar > 0; oneChar--) {
-            System.out.print(charsArr[oneChar]+  ", ");
+        for (oneDouble=2; oneDouble >= 0; oneDouble--) {
+            if (oneDouble>0){
+                System.out.print(doubleArr[(int) oneDouble]+  ", ");
+            }else{
+                System.out.println(doubleArr[(int) oneDouble]);
+            }
         }
-        System.out.println(charsArr[0]);
+
+        for (oneInts=2; oneInts >= 0; oneInts--) {
+            if (oneInts>0){
+                System.out.print(intsArr[oneInts]+  ", ");
+            }else{
+                System.out.println(intsArr[oneInts]);
+            }
+        }
 
         //Задание 4
         System.out.println("\nЗадание 4");
-        int evenNumber=0;
-        for (; evenNumber<3; evenNumber++) {
-            if(integersArr[evenNumber]%2!=0) {
-                integersArr[evenNumber]++;
-                System.out.print(integersArr[evenNumber]+ " ");
-            }
 
+        int number=0;
+        for (; number<3; number++) {
+            if(integersArr[number]%2!=0) {
+                integersArr[number]++;
+                System.out.print(integersArr[number]+ " ");
+            }
             else {
-                System.out.print(integersArr[evenNumber]+" ");
+                System.out.print(integersArr[number]+" ");
             }
         }
     }
