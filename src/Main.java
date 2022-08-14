@@ -83,15 +83,53 @@ public class Main {
             }
             System.out.println();
         }
+
         //Задание 6
         System.out.println("\nЗадание 6");
         int[] arr = {5, 4, 3, 2, 1};
         System.out.println(Arrays.toString(arr));
         int[] additionalArr = new int[arr.length];
         for (int i = 0; i < arr.length; i++) {
-            additionalArr[arr.length - 1 - i]=arr[i];
+            additionalArr[arr.length - 1 - i] = arr[i];
         }
-        arr=additionalArr;
+        arr = additionalArr;
         System.out.println(Arrays.toString(arr));
+
+        //Задание 7
+        System.out.println("\nЗадание 7");
+        int n = arr.length;
+        int temp;
+        for (int i = 0; i < n / 2; i++) {
+            temp = arr[n - i - 1];
+            arr[n - i - 1] = arr[i];
+            arr[i] = temp;
+        }
+        System.out.println(Arrays.toString(arr));
+
+        //Задание 8
+        System.out.println("\nЗадание 8");
+        int[] numbers = {-6, 2, 5, -8, 8, 10, 4, -7, 12, 1};
+        int k = numbers.length;
+        for (int m = 0; m <= k - 1; m++) {
+            for (int p = 0; p < k - 1; p++) {
+                if (numbers[m] + numbers[p + 1] == -2) {
+                    System.out.print(numbers[m] + " ");
+                    System.out.println(numbers[p + 1]);
+                }
+            }
+        }
+        //Задание 9
+        System.out.println("\nЗадание 9");
+        int r, two = -2;
+        for (int m = 0; m < k; m++) {
+            if (numbers[m] >= 0) {
+                r = numbers[m]*(-1) + two;
+                System.out.println(numbers[m] + " " + r);
+            } else if (numbers[m] < 0) {
+                r = numbers[m] * (-1) + two;
+                System.out.println(numbers[m] + " " + r);
+            }
+
+        }
     }
 }
