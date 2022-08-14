@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         // Задание 1
@@ -59,7 +61,7 @@ public class Main {
         }
         //Задание 4
         System.out.println("\nЗадание 4");
-        for (int number = 0; number < 3; number++) {
+        for (int number = 0; number < integersArr.length; number++) {
             if (integersArr[number] % 2 != 0) {
                 integersArr[number]++;
                 System.out.print(integersArr[number] + " ");
@@ -67,5 +69,29 @@ public class Main {
                 System.out.print(integersArr[number] + " ");
             }
         }
+        //Задание 5
+        System.out.println("\nЗадание 5");
+        int size = 3;
+        int[][] matrix = new int[size][size];
+        for (int i = 0; i < size; i++) {
+            matrix[i][i] = 1;
+            matrix[i][size - i - 1] = 1;
+        }
+        for (int[] row : matrix) {
+            for (int column : row) {
+                System.out.print(column + " ");
+            }
+            System.out.println();
+        }
+        //Задание 6
+        System.out.println("\nЗадание 6");
+        int[] arr = {5, 4, 3, 2, 1};
+        System.out.println(Arrays.toString(arr));
+        int[] additionalArr = new int[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            additionalArr[arr.length - 1 - i]=arr[i];
+        }
+        arr=additionalArr;
+        System.out.println(Arrays.toString(arr));
     }
 }
